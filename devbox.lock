@@ -1,0 +1,152 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "resolved": "github:NixOS/nixpkgs/3549532663732bfd89993204d40543e9edaec4f2?lastModified=1742272065&narHash=sha256-ud8vcSzJsZ%2FCK%2Br8%2Fv0lyf4yUntVmDq6Z0A41ODfWbE%3D"
+    },
+    "go@1.24.1": {
+      "last_modified": "2025-03-11T17:52:14Z",
+      "resolved": "github:NixOS/nixpkgs/0d534853a55b5d02a4ababa1d71921ce8f0aee4c#go",
+      "source": "devbox-search",
+      "version": "1.24.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/ja4jxx60lh1qfqfl4z4p2rff56ia1c3c-go-1.24.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/ja4jxx60lh1qfqfl4z4p2rff56ia1c3c-go-1.24.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/8ply43gnxk1xwichr81mpgbjcd9a1y5w-go-1.24.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/8ply43gnxk1xwichr81mpgbjcd9a1y5w-go-1.24.1"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/87yxrfx5lh78bdz393i33cr5z23x06q4-go-1.24.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/87yxrfx5lh78bdz393i33cr5z23x06q4-go-1.24.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/cfjhl0kn7xc65466pha9fkrvigw3g72n-go-1.24.1",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/cfjhl0kn7xc65466pha9fkrvigw3g72n-go-1.24.1"
+        }
+      }
+    },
+    "ruff@0.9.3": {
+      "last_modified": "2025-01-24T01:56:22Z",
+      "resolved": "github:NixOS/nixpkgs/4dfc61e9cd0c26b3bc3e6d6fac3ba10d18959fc4#ruff",
+      "source": "devbox-search",
+      "version": "0.9.3",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/xzpq8haw5rkihm4xdys9q55bbdd3h2z2-ruff-0.9.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/xzpq8haw5rkihm4xdys9q55bbdd3h2z2-ruff-0.9.3"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/d3gprlwa1vs9p3z728j4m6yv59pd9zk3-ruff-0.9.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/d3gprlwa1vs9p3z728j4m6yv59pd9zk3-ruff-0.9.3"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/m0m6wi4nk6la09c6j7yxxgdf1xxxcv4y-ruff-0.9.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/m0m6wi4nk6la09c6j7yxxgdf1xxxcv4y-ruff-0.9.3"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/h4hcf4ypfwnx4g66qkw48q0vibbzyzss-ruff-0.9.3",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/h4hcf4ypfwnx4g66qkw48q0vibbzyzss-ruff-0.9.3"
+        }
+      }
+    },
+    "skaffold@2.13.2": {
+      "last_modified": "2025-02-07T11:26:36Z",
+      "resolved": "github:NixOS/nixpkgs/d98abf5cf5914e5e4e9d57205e3af55ca90ffc1d#skaffold",
+      "source": "devbox-search",
+      "version": "2.13.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/1jy4pagknwdaxqc5xfdhx3xyq75r55nr-skaffold-2.13.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/1jy4pagknwdaxqc5xfdhx3xyq75r55nr-skaffold-2.13.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2nnxbly7rb4c5i8frcc6m1ar2492zs1f-skaffold-2.13.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/2nnxbly7rb4c5i8frcc6m1ar2492zs1f-skaffold-2.13.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/v6q8sgfww15mi3r5v2mwv4p77maqkb8v-skaffold-2.13.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/v6q8sgfww15mi3r5v2mwv4p77maqkb8v-skaffold-2.13.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/0zri8smpm4hw46caxhs1jjsjnxrywd30-skaffold-2.13.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/0zri8smpm4hw46caxhs1jjsjnxrywd30-skaffold-2.13.2"
+        }
+      }
+    }
+  }
+}

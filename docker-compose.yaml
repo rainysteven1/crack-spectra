@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+  redis:
+    image: redis:8.0-M02-alpine3.20
+    container_name: redis
+    ports:
+      - "6379:6379"
+    network_mode: host
+    restart: always
+
+  mariadb:
+    image: mariadb:11.7-ubi
+    container_name: mariadb
+    environment:
+      MYSQL_DATABASE: crack_spectra
+      MYSQL_ROOT_PASSWORD: yourpassword
+      MYSQL_USER: root
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    network_mode: host
+    restart: always
+
+volumes:
+  mariadb_data:
