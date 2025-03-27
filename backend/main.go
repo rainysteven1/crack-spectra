@@ -1,6 +1,7 @@
 package main
 
 import (
+	"backend/client"
 	"backend/config"
 	"backend/router"
 	"fmt"
@@ -50,6 +51,8 @@ func main() {
 		Run: func(cmd *cobra.Command, args []string) {
 			logrus.Println("Running as both producer and consumer")
 			engine := router.New()
+			client.GetRedisClient()
+			client.InitDB()
 			port := viper.GetString("port")
 			err := engine.Run(":" + port)
 			if err != nil {
