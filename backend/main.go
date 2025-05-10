@@ -39,7 +39,7 @@ func main() {
 	}
 
 	rootCmd.PersistentFlags().StringVarP(&port, "port", "p", "8080", "Port to run the server on")
-	rootCmd.PersistentFlags().StringVarP(&conf, "conf", "c", "/etc/CrackSpectura/config.prod.toml", "Path to configuration file")
+	rootCmd.PersistentFlags().StringVarP(&conf, "conf", "c", "config.dev.toml", "Path to configuration file")
 
 	viper.BindPFlag("port", rootCmd.PersistentFlags().Lookup("port"))
 	viper.BindPFlag("conf", rootCmd.PersistentFlags().Lookup("conf"))
@@ -47,7 +47,7 @@ func main() {
 	config.Init(viper.GetString("conf"))
 
 	var runCommand = &cobra.Command{
-		Use: "run",
+		Use: "both",
 		Run: func(cmd *cobra.Command, args []string) {
 			logrus.Println("Running as both producer and consumer")
 			engine := router.New()

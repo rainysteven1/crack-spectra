@@ -1,5 +1,5 @@
 # Global Variables
-BACKEND_DIR = experiments_controller
+BACKEND_DIR = backend
 NS          = crack-spectra
 
 .PHONY: help build run debug swagger import clean-finalizer delete-chaos k8s-resources ports \
@@ -29,9 +29,8 @@ run: ## Build and deploy using skaffold
 
 local-debug: ## Start local debug environment (databases + controller)
 	docker compose down && \
-	docker compose up redis mariadb jaeger -d && \
-	kubectl delete jobs --all -n $(NS) && \
-	cd $(BACKEND_DIR) && go run main.go both --port 8082
+	docker compose up redis mariadb -d && \
+	cd $(BACKEND_DIR) && go run main.go both --conf config.dev.toml --port 8082
 
 swagger: ## Generate Swagger API documentation
 	swag init -d ./$(BACKEND_DIR) --parseDependency --parseDepth 1 --output ./$(BACKEND_DIR)/docs

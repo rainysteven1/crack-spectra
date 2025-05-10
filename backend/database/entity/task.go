@@ -3,6 +3,9 @@ package entity
 import (
 	"backend/consts"
 	"time"
+
+	"github.com/google/uuid"
+	"gorm.io/gorm"
 )
 
 type Project struct {
@@ -11,6 +14,13 @@ type Project struct {
 	Description string `gorm:"size:256"`
 
 	Tasks []Task `gorm:"foreignKey:ProjectID"`
+}
+
+func (p *Project) BeforeCreate(tx *gorm.DB) (err error) {
+	if p.ID == "" {
+		p.ID = uuid.NewString()
+	}
+	return
 }
 
 type Task struct {
@@ -27,7 +37,14 @@ type Task struct {
 	CreatedAt  time.Time
 	FinishedAt *time.Time
 
-	ModelVersion ModelVersion `gorm:"foreignKey:ModelVersionID"`
-	Project      Project      `gorm:"foreignKey:ProjectID"`
-	Creator      User         `gorm:"foreignKey:CreatorID"`
+	ModelVersion ModelVersion `gorm:"foreignKey:ModelVersionID;constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	Project      Project      `gorm:"foreignKey:ProjectID;constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+	Creator      User         `gorm:"foreignKey:CreatorID;constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`
+}
+
+func (t *Task) BeforeCreate(tx *gorm.DB) (err error) {
+	if t.ID == "" {
+		t.ID = uuid.NewString()
+	}
+	return
 }
