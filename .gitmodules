@@ -1,0 +1,4 @@
+[submodule "lib/Crack"]
+	path = lib/Crack
+	url = git@github.com:rainysteven1/Crack.git
+	branch = main
